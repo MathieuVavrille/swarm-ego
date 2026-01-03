@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkx3e6e8xt6qt"]
+
+[ext_resource type="Script" uid="uid://pimi3janl4wh" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b7jq2ru0u2axk" path="res://character.tscn" id="1_ig7tw"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7dm0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(735, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(20, 516)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Barriers"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-1.4960766e-05, -1.5258789e-05)
+scale = Vector2(668, 448)
+texture = SubResource("CanvasTexture_7dm0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2(1, -230)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2(5, 229)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2(-339, 6)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2(336, -1)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Character" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(20, -18)
+
+[node name="Character2" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(64, -18)
+
+[node name="Character3" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(20, -56)
+
+[node name="Character4" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(64, -56)
+
+[node name="Character5" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-66, -18)
+
+[node name="Character6" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-22, -18)
+
+[node name="Character7" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-66, -56)
+
+[node name="Character8" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-22, -56)
+
+[node name="Character9" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(20, 61)
+
+[node name="Character10" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(64, 61)
+
+[node name="Character11" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(20, 23)
+
+[node name="Character12" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(64, 23)
+
+[node name="Character13" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-66, 61)
+
+[node name="Character14" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-22, 61)
+
+[node name="Character15" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-66, 23)
+
+[node name="Character16" parent="Characters" instance=ExtResource("1_ig7tw")]
+position = Vector2(-22, 23)
